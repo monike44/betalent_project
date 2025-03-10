@@ -18,9 +18,9 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Install Node.js
-      uses: actions/setup-node@v3  # Atualizado para a versão mais recente
+      uses: actions/setup-node@latest  # Usando a versão mais recente
       with:
-        node-version: '13.x'  # Se necessário, considere atualizar a versão do Node.js
+        node-version: '13.x'  # Considere atualizar a versão do Node.js se necessário
 
     - name: Install NPM packages
       run: npm ci
@@ -32,7 +32,7 @@ jobs:
       run: npm run test
 
     - name: Upload production-ready build files
-      uses: actions/upload-artifact@v3  # Atualizado para a versão mais recente
+      uses: actions/upload-artifact@latest  # Usando a versão mais recente
       with:
         name: production-files
         path: ./build
@@ -45,7 +45,7 @@ jobs:
     
     steps:
     - name: Download artifact
-      uses: actions/download-artifact@v3  # Atualizado para a versão mais recente
+      uses: actions/download-artifact@latest  # Usando a versão mais recente
       with:
         name: production-files
         path: ./build
