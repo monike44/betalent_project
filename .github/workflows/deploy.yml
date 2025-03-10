@@ -1,6 +1,5 @@
 name: Build & deploy
 
-
 on:
   push:
     branches:
@@ -19,10 +18,10 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Install Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3  # Atualizado para a versão mais recente
       with:
-        node-version: 13.x
-    
+        node-version: '13.x'  # Se necessário, considere atualizar a versão do Node.js
+
     - name: Install NPM packages
       run: npm ci
     
@@ -33,7 +32,7 @@ jobs:
       run: npm run test
 
     - name: Upload production-ready build files
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3  # Atualizado para a versão mais recente
       with:
         name: production-files
         path: ./build
@@ -46,7 +45,7 @@ jobs:
     
     steps:
     - name: Download artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3  # Atualizado para a versão mais recente
       with:
         name: production-files
         path: ./build
