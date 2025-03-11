@@ -49,6 +49,7 @@ export const TD = styled.td`
     padding: 12px; /* Adiciona espaçamento interno 
     box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.5); 
     align-items: center; /* Alinha o conteúdo verticalmente */
+    text-align: left;
 `;
 
 export const Image = styled.img`
