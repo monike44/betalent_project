@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+# Projeto BeTalent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de front-end desenvolvido em React, utilizando TypeScript e Vite como ferramenta de build. O projeto é uma aplicação web que visa fornecer uma tabela com dados de funcionários, permitindo filtragem e pesquisa.
 
-Currently, two official plugins are available:
+## Estrutura do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto está organizado da seguinte forma:
 
-## Expanding the ESLint configuration
+* `src`: Pasta principal do projeto, contendo todos os arquivos de código.
+	+ `components`: Pasta contendo componentes reutilizáveis do projeto.
+		- `filters`: Pasta contendo componentes de filtragem.
+		- `mobilescreen`: Pasta contendo componentes específicos para telas móveis.
+		- `searchbar`: Pasta contendo componente de pesquisa.
+		- `styles`: Pasta contendo estilos globais do projeto.
+	+ `services`: Pasta contendo serviços de API.
+	+ `types`: Pasta contendo definições de tipos do projeto.
+	+ `utils`: Pasta contendo funções utilitárias do projeto.
+	+ `App.tsx`: Arquivo principal da aplicação.
+	+ `index.css`: Arquivo de estilos globais do projeto.
+* `vite.config.ts`: Arquivo de configuração do Vite.
+* `package.json`: Arquivo de configuração do projeto.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* React
+* TypeScript
+* Vite
+* Styled Components
+* Lucide React
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Funcionalidades
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Tabela com dados de funcionários
+* Filtragem por cargo, nome e telefone
+* Pesquisa por nome, cargo e telefone
+* Responsividade para telas móveis
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Como Executar o Projeto
+
+1. Clone o repositório do projeto.
+2. Instale as dependências utilizando `yarn install` ou `npm install`.
+3. Execute o comando `yarn dev` ou `npm run dev` para iniciar o servidor de desenvolvimento.
+4. Acesse o endereço `http://localhost:3000` no seu navegador para visualizar a aplicação.
+
+## Como Contribuir
+
+Se você deseja contribuir com o projeto, por favor, siga os seguintes passos:
+
+1. Faça um fork do repositório do projeto.
+2. Crie uma nova branch para sua contribuição.
+3. Faça as alterações necessárias e commit-as.
+4. Envie um pull request para o repositório original.
+
+## Licença
+
+Este projeto é licenciado sob a licença MIT. Veja o arquivo `LICENSE` para mais informações.
